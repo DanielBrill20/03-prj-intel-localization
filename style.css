@@ -11,8 +11,8 @@ body {
 
 /* Style the header/hero section */
 header {
-  background-color: #0f7dc2; /* Intel blue */
-  color: white;
+  background-color: #005495; /* Darker Intel blue for better contrast */
+  color: #fff;
   padding: 32px 0 24px 0;
   text-align: center;
 }
@@ -76,7 +76,7 @@ section > div:hover {
 
 /* Card headings */
 section h2 {
-  color: #0f7dc2;
+  color: #08325c; /* Much darker blue for strong contrast */
   margin: 0 0 4px 0;
   font-size: 1.2rem;
 }
@@ -121,6 +121,12 @@ section > div:hover .card-details {
   box-sizing: border-box;
 }
 
+/* Improve focus visibility for accessibility */
+a:focus, .btn:focus, input:focus {
+  outline: 2px solid #0f7dc2;
+  outline-offset: 2px;
+}
+
 /* Responsive: Stack cards vertically on small screens */
 @media (max-width: 1200px) {
   section {
@@ -146,11 +152,71 @@ section > div:hover .card-details {
   }
 }
 
+/* --- Three Column Section Styles --- */
+/* This section is NOT affected by the timeline styles above */
+.three-columns {
+  background: #e3f2fd; /* Slightly darker blue for better contrast */
+  padding: 40px 0 40px 0;
+  width: 100%;
+}
+
+/* Style the icons in the headings */
+.three-columns .bi {
+  font-size: 1.5em;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+/* Improve heading color contrast in three-columns */
+.three-columns h2 {
+  color: #08325c; /* Match timeline year color for consistency and contrast */
+}
+
+/* Style the "Learn More" links with higher contrast */
+.learn-more-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #08325c; /* Even darker blue for best contrast */
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px solid #08325c;
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.learn-more-link:hover, .learn-more-link:focus {
+  color: #041a2c;
+  border-bottom: 2px solid #041a2c;
+}
+
+/* Responsive: Stack columns on small screens */
+@media (max-width: 768px) {
+  .three-columns {
+    padding: 24px 0;
+  }
+}
+
 /* Style the instruction text at the bottom */
 body > p {
   text-align: center;
-  color: #0f7dc2;
+  color: #08325c; /* Use dark blue for strong contrast */
   font-weight: bold;
   margin: 18px 0 28px 0;
   font-size: 1.05rem;
+}
+
+/* Footer link styles for better contrast */
+footer {
+  background: #f8fbff;
+}
+
+footer a {
+  color: #08325c; /* Dark blue for high contrast */
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+footer a:hover, footer a:focus {
+  color: #041a2c;
+  text-decoration: underline;
+  outline: none;
 }
